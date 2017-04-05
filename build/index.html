@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>DM单页</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,user-scalable=0">
+
+  <link rel="stylesheet" href="css/dm.css">
+  <script>
+    var sn_config = sn_config||{
+        v : '${v}',
+        channelRes:'${resDomian}'
+    };
+    var dm = dm || {
+      ipcsDomain: '//icpspre.cnsuning.com',
+      prdDomain: '//mpre.cnsuning.com',
+      cartDomain: '//shoppingpre.cnsuning.com'
+    };
+    var passport_config = passport_config || {
+      login: "https://passportpre.cnsuning.com/ids/login",
+      base: "https://aqpre.cnsuning.com/asc/",
+      loginTheme: "wap_new"
+    };
+  </script>
+  <script type="text/javascript">
+    !function(){
+      var UA = window.navigator.userAgent,
+          docEl = document.documentElement;
+      window.device = {
+        isApp : UA.match(/SNEBUY-APP;?/i) ? true : false,
+        isLite : UA.match(/SNLITE-WAP/i) ? true : false,
+        isAndroid : UA.match(/android/i) ? true : false,
+        isIOS : UA.match(/(iPhone|iPod|iPad);?/i) ? true : false,
+        isWX : UA.match(/MicroMessenger/i) ? true : false,
+        isLaMa: UA.match(/lmbang/i) ? true: false,
+        isPreg: UA.match(/preg/i) ? true: false,
+        isLaMall: UA.match(/lamall/i) ? true: false
+
+      };
+      docEl && (device.isLaMa || device.isPreg || device.isLaMall ) && (docEl.className += ' lm-app');
+      docEl && device.isApp && (docEl.className += ' sn-app');
+      docEl && device.isLite && (docEl.className += ' sn-lite');
+      docEl && device.isAndroid && (docEl.className += ' android');
+      docEl && device.isIOS && (docEl.className += ' ios');
+      docEl && device.isWX && (docEl.className += ' wx');
+    }()
+  </script>
+  
+</head>
+<body>
+  <!-- header -->
+  <!--#include virtual="tpl/_header.html"-->
+
+  <!-- banner -->
+  <!--#include virtual="tpl/_banner.html"-->
+
+  <!-- tab -->
+  <!--#include virtual="tpl/_tab.html"-->
+
+  <!-- list -->
+  <!--#include virtual="tpl/_list.html"-->
+
+  <!-- guide -->
+  <!--#include virtual="tpl/_guide.html"-->
+
+  <!-- guide -->
+  <!--#include virtual="tpl/_dialog.html"-->
+
+  <div class="sn-loading-type" data-status="end">
+    <div class="end sn-end-loading"><span>DUANG~到底了</span></div>
+    <div class="loading sn-local-loading"><span class="shape"></span><span class="text">努力加载中...</span></div>
+  </div>
+
+
+  <script src="http://preres.suning.cn/project/mvs/RES/common/script/module/geo/1.0.0/geo.js"></script>
+
+  
+  <script src="js/common/app.js"></script>
+  <script src="js/common/fastclick.js"></script>
+  <script src="js/modules/citycode.js"></script>
+
+  <script src="js/modules/guide.js"></script>
+
+  <script src="js/modules/render.js"></script>
+
+  <script>
+    $('.lazyimg').lazyload();
+  </script>
+  
+</body>
+</html>

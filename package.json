@@ -1,0 +1,25 @@
+{
+  "description": "build tool of sn fed",
+  "name": "fas",
+  "version": "0.1.0",
+  "devDependencies": {
+    "fas-css-urlversion": "*",
+    "fed-mock": "0.0.1",
+    "fed-ssi": "",
+    "gulp": "~3.8.1",
+    "gulp-autoprefixer": "",
+    "gulp-clean": "~0.3.1",
+    "gulp-connect": "~2.2.0",
+    "gulp-imagemin": "~2.0.0",
+    "gulp-inline-imgurl": "",
+    "gulp-jshint": "~1.9.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-plumber": "~0.6.6",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "~1.2.8",
+    "gulp-uglify": "~1.0.1",
+    "gulp-useref": "~1.0.2",
+    "gulp-util": "",
+    "jshint-stylish": "~1.0.0"
+  }
+}

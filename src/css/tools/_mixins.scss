@@ -1,0 +1,80 @@
+
+/*  clearfix  */
+@mixin clearfix() {
+	&:before, &:after {
+		content: '';
+		display: block;
+		height: 0;
+		overflow: hidden;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+/* fixed height center  */
+@mixin height-center($value) {
+	height: $value;
+	line-height: $value;
+}
+
+/*  transition  */
+@mixin transition($property, $mode, $time) {
+	-webkit-transition: $property $mode $time;
+	-moz-transition: $property $mode $time;
+	-o-transition: $property $mode $time;
+	-ms-transition: $property $mode $time;
+	transition: $property $mode $time;
+}
+
+/* opacity  */
+@mixin opacity($val) {
+	opacity: $val;
+	filter: alpha(opacity=($val*100));
+}
+
+/*  ellipsis */
+@mixin ellipsis() {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* scale */
+@mixin scale($value) {
+	-webkit-transform: scale($value);
+	-moz-transform: scale($value);
+	-o-transform: scale($value);
+	-ms-transform: scale($value);
+	transform: scale($value);
+}
+
+/* image display */
+@mixin img-width() {
+	width: 100%;
+	max-width: 100%;
+}
+
+/* border */
+@mixin border-style($color, $radius) {
+	border: 1px solid $color;
+	border-radius: $radius;
+}
+
+/* box flex */
+@mixin boxflex() {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+@mixin flex-item {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	flex: 1;
+}
+
+/* word handler  */
+@mixin word-handler {
+	word-break: break-all;
+	word-wrap: break-word;
+}

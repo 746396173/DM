@@ -1,0 +1,23 @@
+
+.dm-guide {
+	@include boxflex;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	z-index: 46;
+	width: 100%;
+	a {
+		@include flex-item;
+		@include height-center(px2rem(100px));
+		font-size: px2rem(30px);
+		color: $white;
+		background: $red;
+		text-align: center;
+		&:nth-of-type(1) {
+			background: $yellow;
+		}
+		&:nth-of-type(3) {
+			background: $blue;
+		}
+	}
+}

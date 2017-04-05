@@ -1,0 +1,232 @@
+
+.dialog {
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: rgba(0,0,0,.75);
+  z-index: 47;
+  display: none;
+}
+
+.dialog .dialog-wrap {
+  position: relative;
+  width: px2rem(620px);
+  height: px2rem(440px);
+  background: url('../images/popbg.png') no-repeat;
+  background-size: 100%;
+}
+
+.dialog .dialog-wrap .close-dialog {
+  position: absolute;
+  right: 0;
+  top: px2rem(-120px);
+  width: px2rem(100px);
+  height: px2rem(100px);
+  z-index: 100;
+  i {
+    position: absolute;
+    right: 0;
+    top: px2rem(20px);
+    width: 0.8rem;
+    height: 0.8rem;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAAA6CAMAAADWZboaAAABPlBMVEX///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+lso7hAAAAaXRSTlMABgcICgwPEhMUFRYXGBkaHR4fICEiIyQmJyssLS8wMjNAQUVGR0hVVldYXl9ja2xtbnt9goOSk5SWl5igoaKjpKWmqaqtsLm6vL2+v8DGzM7P0NPU1dbX2Nna3N7h4+zt7u/x+Pn6/f6/gLq2AAACaUlEQVRIx+WWa1sSQRiGZ02TFlLR8ISHCslSkshSBFEXD5CpSSHtQhJSuvv8/z/QYl3LHHf3oo/Op5l39t5r5p1n3nkIefBtYn2rYnV+33asytb6RHguvnkFpl1tToYCF49soF3Opecij4Yic+lcuQ3YR4uBYHTXAYwVNrhyADi7UX9ytQsUxsT4WAHorvqA2g5wPC2fmz52f6qpyJEKkFP/OOegMiKfGr5Aa8FvN8kWLoalqz1Fbco/E1M1fJKteQdmIij/CQsFMfoGWAg+9KSDNT423kU2jGA20B3nQgYOw6n0EAYbWHYQDylwOMtM4ITa/vZnnf8+9vXS6xdwQk9N2oh4g3N849hYAzVvEIH9jJp7jwPqBtQ51iUbT/vDPXygJht4RRi2ritJ8hIWVRPQZm8ezfIkIT/Q104GZaJiRZKU8LafU0EOHtsjY9xkFttev4I0kbMykqRQ9fotzBApKyXJDFpe/xcei7LR6zAtGUme4KfXB2SS003AkpBkCLcBaMwCTD0AlS7Y3adlMtroS7Hjm6b7DOl1GUunSXI4/3IrZenDESXhnYqMpSUhCJE6TwlLC5GXP6MEkaXlz106TkM8+wJN5qrvK0mB3cNHuqzTBeaLoD6XPVcVGKasnV0K6tPP8qqyRp4PXkz/o4T3Ho6NAR8OsgYnGUzO2+Jz1dt+iEfSRHHgp/lUUxmCed/VqgzBvQ2xfWzIO1tpQ9w1F13zo9hwwjU/RW1Qy/U6wOiVVEavFA08uqWevbw2sqnZUU0bnU1ljeuevVwKaWobrKn9HtLU/qUz+Wrz5u7uplnNZ+Lkwbc/YT2rLPeV5iUAAAAASUVORK5CYII=);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 100;
+  }
+}
+
+.dialog .dialog-wrap .content {
+  border-radius: .08rem;
+  margin: px2rem(30px);
+  // overflow: hidden;
+}
+
+.dialog.visible {
+  display: flex;
+}
+
+.verify-dialog .content {
+  position: relative;
+}
+
+.verify-dialog .content h5 {
+  color: $white;
+  font-size: px2rem(28px);
+  margin: 0 0 px2rem(30px) 0;
+  padding: 0;
+}
+
+.verify-dialog .content .ldp-box {
+  @include clearfix;
+  height: px2rem(88px);
+  border-radius: px2rem(44px);
+  background: $white;
+  margin-bottom: px2rem(10px);
+}
+
+.verify-dialog .content .ldp-box .ldp-verify {
+  float: left;
+  width: 75%;
+  height: px2rem(88px);
+  font-size: px2rem(24px);
+  color: #696680;
+}
+
+.verify-dialog .content .ldp-box .ldp-verify input {
+  width: 100%;
+  height: px2rem(88px);
+  padding-left: px2rem(20px);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  font-size: px2rem(28px);
+}
+
+.verify-dialog .content .ldp-box input::-webkit-input-placeholder {
+  color: #cacaca;
+}
+
+.verify-dialog .content .ldp-box img {
+  float: left;
+  height: 100%;
+  width: px2rem(140px);
+  border-left: 1px solid #efefef;
+  margin-left: -1px;
+  border-radius: 0 px2rem(44px) px2rem(44px) 0;
+}
+
+.verify-dialog .content .verify-success {
+  display: none;
+  width: 100%;
+  @include height-center(px2rem(88px));
+  margin: 0 auto;
+  text-align: center;
+  color: $yellow;
+  font-size: px2rem(28px);
+  background: $white;
+  border-radius: px2rem(44px);
+}
+
+.verify-dialog .content .verify-error {
+  display: none;
+  position: absolute;
+  width: px2rem(500px);
+  padding: px2rem(30px) px2rem(20px);
+  background: rgba(0,0,0,.8);
+  text-align: center;
+  color: #fff;
+  border-radius: .2rem;
+  top: 50%;
+  left: 50%;
+  margin-left: px2rem(-270px);
+  font-size: px2rem(30px);
+}
+.verify-inner-error {
+  padding-left: px2rem(20px);
+  @include height-center(px2rem(58px));
+  color: #ffe939;
+  font-size: px2rem(28px);
+  p {
+    display: none;
+    @include height-center(px2rem(58px));
+  }
+}
+.quan-content {
+  display: none;
+  padding: px2rem(30px);
+  color: $white;
+  font-size: px2rem(30px);
+  text-align: center;
+  h2 {
+    margin: 0;
+    padding: px2rem(30px) 0 px2rem(15px);
+  }
+  span {
+    font-size: px2rem(36px);
+    color: #f9f313;
+    font-weight: bolder;
+  }
+  p {
+    margin-bottom: px2rem(10px);
+  }
+}
+.quan-btn {
+  @include clearfix;
+  margin-top: px2rem(60px);
+  a {
+    float: left;
+    width: px2rem(160px);
+    padding: 0 px2rem(20px);
+    @include height-center(px2rem(70px));
+    text-align: center;
+    background: $white;
+    margin-left: px2rem(55px);
+    border-radius: px2rem(12px);
+    &:nth-child(2n) {
+      margin-left: px2rem(40px);
+      background: $yellow;
+      color: $white;
+    }
+  }
+}
+.dm-time {
+  display: none;
+  padding-top: px2rem(160px);
+  p {
+    font-size: px2rem(30px);
+    color: $white;
+    line-height: 1.5;
+    text-align: center;
+  }
+}
+.dt_parent .dt_notice {
+    color: #ff5a54 !important;
+    -webkit-text-fill-color: #ff5a54 !important
+}
+
+.dt_parent .dt_child_content_knob,.dt_parent .dt_child_content_knob_move,.dt_parent .dt_child_content_knob_move_back {
+    background: url(../images/valid.png) no-repeat 0 0 !important;
+    background-size: contain !important
+}
+
+.dt_parent .dt_child_content_knob_complete {
+    background: url(../images/right.png) no-repeat 0 0 !important;
+    background-size: contain !important
+}
+
+.dt_parent .dt_child_content_knob_error {
+    background: url(../images/error.png) no-repeat 0 0 !important;
+    background-size: contain !important
+}
+
+.dt_parent .dt_child_content {
+    background: #fff !important;
+    border-radius: px2rem(44px);
+}
+
+.dt_parent .dt_slide_bar_back {
+    background: #fff !important;
+    border-radius: px2rem(44px);
+}
+
+.dt_parent .dt_slide_bar {
+    background: transparent !important;
+    border-radius: px2rem(44px);
+}
+
+.dt_parent .dt_notice_complete {
+    color: #ff5a54 !important;
+    border-radius: px2rem(44px);
+}

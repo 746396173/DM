@@ -1,0 +1,15 @@
+<TemplateEntityBean>
+  <templateId>3739</templateId>
+  <templateName>DM单页活动</templateName>
+  <templateCode>dm_huodong</templateCode>
+  <templateDesc></templateDesc>
+  <createTime>2017-03-08 18:02:55.0</createTime>
+  <lastupTime>2017-03-08 18:02:55.0</lastupTime>
+  <templateFilepath>wap/dm_huodong/dm_huodong.ftl</templateFilepath>
+  <categoryId>253</categoryId>
+  <templateStatus>1</templateStatus>
+  <templateType>2</templateType>
+  <catalogId>3</catalogId>
+  <syncType>1,2,3</syncType>
+  <categoryCode>wap</categoryCode>
+</TemplateEntityBean>
